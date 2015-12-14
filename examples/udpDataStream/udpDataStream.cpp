@@ -8,7 +8,7 @@
 #define UDP_TX_PACKET_MAX_SIZE 24 // from normal arduino ethernetudp.h
 
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xEE}; //Assign a mac address
-IPAddress ip(169,254,5,12); //Assign my IP adress
+//IPAddress ip(169,254,5,12); //Assign my IP adress
 unsigned int localPort = 5000; //Assign a Port to talk over
 char packetBuffer[UDP_TX_PACKET_MAX_SIZE];
 String datReq; //String for our data
@@ -20,13 +20,14 @@ void setup() {
   int success;
   do{
     Serial.begin(9600); //Turn on Serial Port
-    Ethernet.begin(mac, ip); //Initialize Ethernet
-  //  if (Ethernet.begin(mac) == 0) {
-  //    Serial.println("Failed to configure Ethernet using DHCP");
-  //    // no point in carrying on, so do nothing forevermore:
-  //    for(;;)
-  //      ;
-  //  }
+    Serial.println("hello world");
+    //Ethernet.begin(mac, ip); //Initialize Ethernet
+    if (Ethernet.begin(mac) == 0) {
+      Serial.println("Failed to configure Ethernet using DHCP");
+      // no point in carrying on, so do nothing forevermore:
+      for(;;)
+        ;
+    }
     Serial.print("My IP address: ");
     for (byte thisByte = 0; thisByte < 4; thisByte++) {
       // print the value of each byte of the IP address:
