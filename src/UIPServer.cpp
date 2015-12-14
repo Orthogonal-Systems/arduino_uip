@@ -19,7 +19,7 @@
 #include "UIPEthernet.h"
 #include "UIPServer.h"
 extern "C" {
-  #include "utility/uip-conf.h"
+  #include "uip-conf.h"
 }
 
 UIPServer::UIPServer(uint16_t port) : _port(htons(port))

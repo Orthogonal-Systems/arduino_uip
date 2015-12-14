@@ -23,9 +23,9 @@
 #include "ethernet_comp.h"
 #include "Arduino.h"
 #include <Udp.h>
-#include "utility/mempool.h"
+#include "mempool.h"
 extern "C" {
-  #include "utility/uip.h"
+  #include "uip.h"
 }
 
 #define UIP_UDP_MAXDATALEN 1500

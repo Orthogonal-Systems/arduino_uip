@@ -19,9 +19,9 @@
 
 extern "C"
 {
-#import "utility/uip-conf.h"
-#import "utility/uip.h"
-#import "utility/uip_arp.h"
+#import "uip-conf.h"
+#import "uip.h"
+#import "uip_arp.h"
 #import "string.h"
 }
 #include "UIPEthernet.h"

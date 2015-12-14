@@ -19,7 +19,7 @@
 
 #include <Arduino.h>
 #include "UIPEthernet.h"
-#include "utility/Enc28J60Network.h"
+#include "Enc28J60Network.h"
 
 #if(defined UIPETHERNET_DEBUG || defined UIPETHERNET_DEBUG_CHKSUM)
 #include "HardwareSerial.h"
@@ -29,10 +29,10 @@
 
 extern "C"
 {
-#include "utility/uip-conf.h"
-#include "utility/uip.h"
-#include "utility/uip_arp.h"
-#include "utility/uip_timer.h"
+#include "uip-conf.h"
+#include "uip.h"
+#include "uip_arp.h"
+#include "uip_timer.h"
 }
 
 #define ETH_HDR ((struct uip_eth_hdr *)&uip_buf[0])

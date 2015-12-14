@@ -3,7 +3,7 @@
 // Released under Apache License, version 2.0
 
 #include "Udp.h"
-#include "utility/util.h"
+#include "util.h"
 
 #include "Dns.h"
 #include <string.h>

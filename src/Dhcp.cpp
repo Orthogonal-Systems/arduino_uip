@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include "Dhcp.h"
 #include "Arduino.h"
-#include "utility/util.h"
+#include "util.h"
 
 int DhcpClass::beginWithDHCP(uint8_t *mac, unsigned long timeout, unsigned long responseTimeout)
 {

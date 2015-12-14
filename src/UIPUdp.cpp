@@ -26,9 +26,9 @@
 #endif
 
 extern "C" {
-#include "utility/uip-conf.h"
-#include "utility/uip.h"
-#include "utility/uip_arp.h"
+#include "uip-conf.h"
+#include "uip.h"
+#include "uip_arp.h"
 }
 
 #if UIP_UDP

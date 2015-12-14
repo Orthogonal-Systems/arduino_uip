@@ -29,15 +29,15 @@
 #include <Arduino.h>
 #include "Dhcp.h"
 #include "IPAddress.h"
-#include "utility/Enc28J60Network.h"
+#include "Enc28J60Network.h"
 #include "UIPClient.h"
 #include "UIPServer.h"
 #include "UIPUdp.h"
 
 extern "C"
 {
-#include "utility/uip_timer.h"
-#include "utility/uip.h"
+#include "uip_timer.h"
+#include "uip.h"
 }
 
 #define UIPETHERNET_FREEPACKET 1
