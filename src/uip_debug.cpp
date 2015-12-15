@@ -1,9 +1,11 @@
+#pragma GCC diagnostic ignored "-Wstrict-aliasing"
+
 #include <Arduino.h>
 #include <HardwareSerial.h>
 #include <inttypes.h>
 #include <uip_debug.h>
 extern "C" {
-  #import "uip.h"
+  #include "uip.h"
 }
 
 struct uip_conn con[UIP_CONNS];

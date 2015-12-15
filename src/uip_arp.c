@@ -58,6 +58,7 @@
  *
  */
 
+#pragma GCC diagnostic ignored "-Wstrict-aliasing"
 
 #include "uip_arp.h"
 

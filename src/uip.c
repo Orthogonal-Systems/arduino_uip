@@ -1,5 +1,7 @@
 #define DEBUG_PRINTF(...) /*printf(__VA_ARGS__)*/
 
+#pragma GCC diagnostic ignored "-Wstrict-aliasing"
+
 /**
  * \defgroup uip The uIP TCP/IP stack
  * @{
