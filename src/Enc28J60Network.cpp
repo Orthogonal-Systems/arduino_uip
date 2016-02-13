@@ -248,9 +248,14 @@ Enc28J60Network::sendPacket(memhandle handle)
   // send the contents of the transmit buffer onto the network
   writeOp(ENC28J60_BIT_FIELD_SET, ECON1, ECON1_TXRTS);
   // Reset the transmit logic problem. See Rev. B4 Silicon Errata point 12.
+  // NOTE: Trying fix for randomly hanging enc chip:
+  // http://forum.mysensors.org/topic/536/problems-with-enc28j60-losing-connection-freezing-using-uipethernet-or-ethershield-read-this/2
   if( (readReg(EIR) & EIR_TXERIF) )
     {
-      writeOp(ENC28J60_BIT_FIELD_CLR, ECON1, ECON1_TXRTS);
+      //writeOp(ENC28J60_BIT_FIELD_CLR, ECON1, ECON1_TXRTS);
+      writeOp(ENC28J60_BIT_FIELD_SET, ECON1, ECON1_TXRST);
+      writeOp(ENC28J60_BIT_FIELD_CLR, ECON1, ECON1_TXRST);
+      writeOp(ENC28J60_BIT_FIELD_CLR, EIR, EIR_TXERIF);
     }
 
   //restore data on control-byte position
